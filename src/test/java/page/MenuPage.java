@@ -2,18 +2,16 @@ package page;
 
 import java.net.MalformedURLException;
 
-import core.DSL;
 
-public class MenuPage {
+public class MenuPage extends BasePage {
 	
-	private DSL dsl;
 	
-	public MenuPage() throws MalformedURLException{
-		dsl = new DSL();
+	public MenuPage() throws MalformedURLException {
+		super();
 	}
-	
+
 	public void acessarFormulario() {
-		dsl.clicarEmFormulario();
+		clicarEmFormulario();
 
 	}
 

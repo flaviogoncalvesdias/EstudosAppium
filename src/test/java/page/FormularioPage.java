@@ -2,45 +2,42 @@ package page;
 
 import java.net.MalformedURLException;
 
-import core.DSL;
+public class FormularioPage extends BasePage{
 
-public class FormularioPage {
-
-	private DSL dsl;
 
 	public FormularioPage() throws MalformedURLException {
-		dsl = new DSL();
-	}
+		super();
+			}
 
 	public void escreverNome(String nome) {
-		dsl.preencherNome(nome);
+		preencherNome(nome);
 	}
 
 	public String obterTextoPorNome(String nome) {
-		return dsl.retornaValorElelementoPorTexto(nome);
+		return retornaValorElelementoPorTexto(nome);
 	}
 
 	public void clicarLista() {
-		dsl.clicaAccId("console");
+		clicaAccId("console");
 	}
 
 	public void clicarCheck() {
-		dsl.clicaAccId("check");
+		clicaAccId("check");
 
 	}
 
 	public void clicarCombo() {
-		dsl.clicaAccId("switch");
+		clicaAccId("switch");
 
 	}
 
 	public void selecionarConsole(String console) {
-		dsl.selecionaOpcao(console);
+		selecionaOpcao(console);
 
 	}
 
 	public void clicarSalvar() {
-		dsl.clicaBtnTexto("SALVAR");
+		clicaBtnTexto("SALVAR");
 
 	}
 

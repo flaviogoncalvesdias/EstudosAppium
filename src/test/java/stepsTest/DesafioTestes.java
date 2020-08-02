@@ -4,16 +4,14 @@ import static org.junit.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import core.DSL;
-import core.DriveFactory;
+
+import core.BaseTest;
 import page.FormularioPage;
 import page.MenuPage;
 
-public class DesafioTestes {
-	private DSL dsl;
+public class DesafioTestes extends BaseTest{
 	private MenuPage menu;
 	private FormularioPage formulario;
 
@@ -25,10 +23,6 @@ public class DesafioTestes {
 
 	}
 
-	@AfterClass
-	public static void finalizaTestes() {
-		DriveFactory.killDriver();
-	}
 
 	@Test
 	public void validaForulario() throws MalformedURLException {
