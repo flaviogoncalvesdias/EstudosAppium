@@ -35,5 +35,9 @@ public class BaseTest {
 		File imagem = DriveFactory.getDriver().getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(imagem, new File("output/screenshots/"+testName.getMethodName()+".png"));
 	}
+	
+	public void esperar(){
+		
+	}
 
 }

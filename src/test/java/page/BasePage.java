@@ -1,6 +1,7 @@
 package page;
 
 import java.net.MalformedURLException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 
@@ -10,14 +11,13 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BasePage {
-	
+
 	public AndroidDriver<MobileElement> driver;
 
 	public BasePage() throws MalformedURLException {
 		driver = DriveFactory.getDriver();
 	}
-	
-	
+
 	public void selecionaOpcao(String opcao) {
 		driver.findElement(By.xpath("//android.widget.CheckedTextView[@text='" + opcao + "']")).click();
 	}
@@ -42,6 +42,11 @@ public class BasePage {
 	public String retornaValorElelementoPorTexto(String txt) {
 		return driver.findElement(By.xpath("//*[@text='" + txt + "']")).getText();
 	}
-	
+
+	public boolean existeElelementoPorTexto(String txt) {
+		List<MobileElement> elementos = driver.findElements(By.xpath("//*[@text='"+txt+"']"));
+		return elementos.size() > 0;
+
+	}
 
 }

@@ -25,7 +25,7 @@ public class DesafioTestes extends BaseTest{
 
 
 	@Test
-	public void validaForulario() throws MalformedURLException {
+	public void validaFormulario() throws MalformedURLException {
 		menu.acessarFormulario();
 		formulario.escreverNome("Flávio Dias");
 		formulario.clicarLista();
