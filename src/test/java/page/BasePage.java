@@ -48,5 +48,13 @@ public class BasePage {
 		return elementos.size() > 0;
 
 	}
+	
+	public void acessarAlertas(){
+		clicaBtnTexto("Alertas");
+	}
+	
+//	public String obterTexto(By by) {
+//		return driver.findElement(by).getText();
+//	}
 
 }
