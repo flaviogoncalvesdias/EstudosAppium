@@ -18,6 +18,10 @@ public class MenuPage extends BasePage {
 	public void acessarMenuSplash() {
 		clicaBtnTexto("Splash");
 	}
+
+	public void acessarAbas() {
+		clicaBtnTexto("Abas");
+	}
 	
 	
 
