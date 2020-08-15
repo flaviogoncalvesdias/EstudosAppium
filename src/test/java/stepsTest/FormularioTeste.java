@@ -12,12 +12,19 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import core.BaseTest;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import page.FormularioPage;
 
-public class FormularioTeste {
+public class FormularioTeste extends BaseTest{
 	private AndroidDriver driver;
+	private FormularioPage page = new FormularioPage();
+	
+	public FormularioTeste() throws MalformedURLException {
+		super();
+	}
 
 //	@Test
 	public void devePreencherCampoTexto() throws MalformedURLException {
@@ -76,7 +83,7 @@ public class FormularioTeste {
 		driver.quit();
 	}
 
-	@Test
+//	@Test
 	public void deveInteragirCheckBox() throws MalformedURLException {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
@@ -116,5 +123,6 @@ public class FormularioTeste {
 		driver.quit();
 		
 	}
-
+	
+	
 }

@@ -2,6 +2,9 @@ package page;
 
 import java.net.MalformedURLException;
 
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+
 public class FormularioPage extends BasePage{
 
 
@@ -39,6 +42,12 @@ public class FormularioPage extends BasePage{
 	public void clicarSalvar() {
 		clicaBtnTexto("SALVAR");
 
+	}
+	
+	public void clicarSeekBar(double posicao) {
+		
+		MobileElement seek = driver.findElement(MobileBy.AccessibilityId("slid"));
+		
 	}
 
 }
