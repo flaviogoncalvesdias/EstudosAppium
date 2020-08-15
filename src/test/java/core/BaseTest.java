@@ -36,8 +36,8 @@ public class BaseTest {
 		FileUtils.copyFile(imagem, new File("output/screenshots/"+testName.getMethodName()+".png"));
 	}
 	
-	public void esperar(){
-		
+	public void esperar(int tempo) throws InterruptedException{
+		Thread.sleep(tempo);
 	}
 
 }

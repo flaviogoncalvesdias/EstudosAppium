@@ -1,5 +1,7 @@
 package stepsTest;
 
+import static org.junit.Assert.assertFalse;
+
 import java.net.MalformedURLException;
 
 import org.junit.Before;
@@ -19,7 +21,7 @@ public class AlertTest extends BaseTest{
 		menu = new MenuPage();
 		alertaPage  = new AlertaPage();
 	}
-	@Test
+
 	public void confirmarAlerta(){
 		menu.acessarAlertas();
 		alertaPage.clicarAlerta();
@@ -27,5 +29,13 @@ public class AlertTest extends BaseTest{
 		
 	}
 	
-
+	@Test
+	public void cliquePorCoordenadas() throws InterruptedException {
+		menu.acessarAlertas();
+		alertaPage.clicarAlertaSimples();
+		esperar(1000);
+		alertaPage.clicarCoordenadas(100,150);
+		assertFalse("Elemento continua visivel. ", alertaPage.existeElelementoPorTexto("Pode clicar no OK ou fora da caixa para sair"));
+	}
+	
 }
